@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @Arnavsao
 - 👀 I’m interested in everything which is related to tech.
-- 🌱 I’m currently learning Web Development, DSA, Machine Learning.
+- 🌱 I’m currently learning Web Development, Machine Learning, DSA.
 - 💞️ I’m looking to collaborate on all the above.
 - 📫 You can reach me through my Linkedin account: https://www.linkedin.com/in/arnavsao/
 - 😄 Pronouns: He/Him
