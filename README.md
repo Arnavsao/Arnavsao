@@ -1,72 +1,29 @@
-# Hi, I'm Arnav Sao! 👋
+# 💫 About Me:
+I'm a passionate software developer with experience in **Web Development**, **Data Analytics**, and **AI-driven applications**. I enjoy building innovative projects and leveraging modern tools like **React.js**, **Tailwind CSS**, and **Python** to create impactful solutions.<br><br>
+I'm always eager to learn, contribute to open-source, and collaborate on challenging projects. Let's build something awesome together! 🚀
 
-I'm a passionate **Software Developer** and **AI enthusiast** constantly exploring cutting-edge technologies in **web development** and **machine learning**. I love solving complex problems and building impactful solutions that make a difference.
+# 💻 Tech Stack:
+![C++](https://img.shields.io/badge/C++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) 
+![Python](https://img.shields.io/badge/Python-%233776AB.svg?style=for-the-badge&logo=python&logoColor=white) 
+![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black) 
+![React](https://img.shields.io/badge/React-%2320232A.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) 
+![Node.js](https://img.shields.io/badge/Node.js-%23339933.svg?style=for-the-badge&logo=node.js&logoColor=white) 
+![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) 
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) 
+![Firebase](https://img.shields.io/badge/Firebase-%23039BE5.svg?style=for-the-badge&logo=firebase) 
+![Docker](https://img.shields.io/badge/Docker-%232496ED.svg?style=for-the-badge&logo=docker&logoColor=white) 
+![Git](https://img.shields.io/badge/Git-%23F05032.svg?style=for-the-badge&logo=git&logoColor=white)
 
----
+# 📊 GitHub Stats:
+![](https://github-readme-stats.vercel.app/api?username=Arnavsao&theme=vue-dark&hide_border=false&include_all_commits=true&count_private=true)<br/>
+![](https://github-readme-streak-stats.herokuapp.com/?user=Arnavsao&theme=vue-dark&hide_border=false)<br/>
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=Arnavsao&theme=vue-dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
 
-## 🌟 About Me
+## 🏆 GitHub Trophies
+![](https://github-profile-trophy.vercel.app/?username=Arnavsao&theme=radical&no-frame=false&no-bg=true&margin-w=4)
 
-- 🎓 **Education:** B.Tech in Information Technology from Rajiv Gandhi Institute of Petroleum Technology, Amethi (CPI: 7.69)
-- 💼 **Experience:** Freelance Developer, AI Innovator, and Frontend Specialist
-- 🏆 **Achievements:**
-  - Secured **AIR 22,519** in IIT JEE (Top 2.5%)
-  - Selected for **Smart India Hackathon 2023 & 2024**
-  - Solved **250+ LeetCode problems**
-
----
-
-## 🔧 Tech Stack
-
-### **Languages:**
-- Python, JavaScript, C/C++, SQL
-
-### **Frameworks & Tools:**
-- React.js, Next.js, Tailwind CSS, Firebase, MongoDB, Docker
-
-### **AI/ML Tools:**
-- Hugging Face, OpenAI API, TensorFlow, LangChain
-
-### **Development Tools:**
-- Git/GitHub, VS Code, Postman, Jenkins, Kubernetes, CI/CD pipelines
+### ✍️ Random Dev Quote
+![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
 
 ---
-
-## 🚀 Key Projects
-
-### **1. AI SaaS Platform**
-- Built tools using **Hugging Face NLP** for 5,000+ users.
-- Automated workflows, cutting costs by 15%.
-
-### **2. GAIL Chatbot**
-- Developed an energy-sector chatbot with **Python** and **Flask**, achieving 95% user satisfaction.
-
-### **3. RAG System with GPT-4**
-- Designed a query-optimized system handling 10,000+ daily queries using **LangChain** and **FAISS**.
-
----
-
-## 💼 Work Experience
-
-### **Software Developer Intern @ HealthyBites** *(Dec 2024 – Present)*
-- Enhanced platform performance using **Next.js** and **Tailwind CSS**.
-- Improved application stability and user satisfaction through advanced UI fixes.
-
-### **Frontend Developer Intern @ GrapplTech** *(Jul – Aug 2024)*
-- Created responsive UIs with **React.js** and optimized load times, boosting mobile traffic by 30%.
-
-### **Freelancer @ Titans AI** *(Jun – Oct 2024)*
-- Automated workflows using **NLP**, increasing productivity by 30%.
-- Delivered AI chatbots that boosted client engagement by 25%.
-
----
-
-## 🌐 Connect with Me
-
-- 📧 Email: [arnavsao1924@gmail.com](mailto:arnavsao1924@gmail.com)
-- 💼 LinkedIn: [linkedin.com/in/arnavsao](https://www.linkedin.com/in/arnavsao/)
-- 🔗 GitHub: [github.com/ArnavSao1924](https://github.com/ArnavSao1924)
-
----
-
-### 🎯 Let's Collaborate!
-I'm always open to collaborating on exciting projects or discussing new ideas. Feel free to reach out!
+[![](https://visitcount.itsvg.in/api?id=Arnavsao&icon=0&color=3)](https://visitcount.itsvg.in)
