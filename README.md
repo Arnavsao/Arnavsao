@@ -1,5 +1,5 @@
 # 💫 About Me:
-I'm a passionate software developer with experience in **Web Development**, **Data Analytics**, and **AI-driven applications**. I enjoy building innovative projects and leveraging modern tools like **React.js**, **Tailwind CSS**, and **Python** to create impactful solutions.<br><br>
+I'm a passionate software developer with experience in **Web Development** and **AI-driven applications**. I enjoy building innovative projects and leveraging modern tools like **React.js**, **Tailwind CSS**, and **Python** to create impactful solutions.<br><br>
 I'm always eager to learn, contribute to open-source, and collaborate on challenging projects. Let's build something awesome together! 🚀
 
 # 💻 Tech Stack:
