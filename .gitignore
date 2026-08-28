@@ -1,0 +1,17 @@
+# Virtual environment
+.venv/
+
+# OS / Editor artifacts
+.DS_Store
+.vscode/
+.idea/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Temp image processing
+source-prepped.png
+
+# Private context files
+Context/

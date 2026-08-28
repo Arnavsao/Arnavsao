@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 402"
+     width="490" height="402">
+
+  <defs>
+    <filter id="text-glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.6" result="blur" />
+      <feFlood flood-color="#39d353" flood-opacity="0.25" result="color" />
+      <feComposite in="color" in2="blur" operator="in" result="glow" />
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <linearGradient id="border-g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#39d353" stop-opacity="0.5" />
+      <stop offset="50%" stop-color="#2ea043" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#006d32" stop-opacity="0.5" />
+    </linearGradient>
+  </defs>
+
+  <rect width="490" height="402" fill="#0d1117" rx="8" />
+  <rect x="1" y="1" width="488" height="400" fill="none" stroke="url(#border-g)" stroke-width="1" rx="7" />
+
+  <g opacity="0.5">
+    <line x1="6" y1="6" x2="20" y2="6" stroke="#39d353" stroke-width="1.5" />
+    <line x1="6" y1="6" x2="6" y2="20" stroke="#39d353" stroke-width="1.5" />
+    <line x1="484" y1="6" x2="470" y2="6" stroke="#39d353" stroke-width="1.5" />
+    <line x1="484" y1="6" x2="484" y2="20" stroke="#39d353" stroke-width="1.5" />
+    <line x1="6" y1="396" x2="20" y2="396" stroke="#006d32" stroke-width="1.5" />
+    <line x1="6" y1="396" x2="6" y2="382" stroke="#006d32" stroke-width="1.5" />
+    <line x1="484" y1="396" x2="470" y2="396" stroke="#006d32" stroke-width="1.5" />
+    <line x1="484" y1="396" x2="484" y2="382" stroke="#006d32" stroke-width="1.5" />
+  </g>
+
+  <style>
+    @keyframes fadeSlideIn {
+      from { opacity: 0; transform: translateX(15px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+    .line-0 { opacity: 0; animation: fadeSlideIn 0.45s ease-out 0.00s forwards; }
+    .line-1 { opacity: 0; animation: fadeSlideIn 0.45s ease-out 0.14s forwards; }
+    .line-2 { opacity: 0; animation: fadeSlideIn 0.45s ease-out 0.28s forwards; }
+    .line-3 { opacity: 0; animation: fadeSlideIn 0.45s ease-out 0.42s forwards; }
+    .line-4 { opacity: 0; animation: fadeSlideIn 0.45s ease-out 0.56s forwards; }
+    .line-5 { opacity: 0; animation: fadeSlideIn 0.45s ease-out 0.70s forwards; }
+    .line-6 { opacity: 0; animation: fadeSlideIn 0.45s ease-out 0.84s forwards; }
+    .line-7 { opacity: 0; animation: fadeSlideIn 0.45s ease-out 0.98s forwards; }
+    .line-8 { opacity: 0; animation: fadeSlideIn 0.45s ease-out 1.12s forwards; }
+    .line-9 { opacity: 0; animation: fadeSlideIn 0.45s ease-out 1.26s forwards; }
+    .line-10 { opacity: 0; animation: fadeSlideIn 0.45s ease-out 1.40s forwards; }
+    .line-11 { opacity: 0; animation: fadeSlideIn 0.45s ease-out 1.54s forwards; }
+    .line-12 { opacity: 0; animation: fadeSlideIn 0.45s ease-out 1.68s forwards; }
+    .line-13 { opacity: 0; animation: fadeSlideIn 0.45s ease-out 1.82s forwards; }
+    .line-14 { opacity: 0; animation: fadeSlideIn 0.45s ease-out 1.96s forwards; }
+    @keyframes blink { 0%,49% { opacity:1 } 50%,100% { opacity:0 } }
+    .cursor-blink { animation: blink 1s step-end infinite; animation-delay: 2.6s; opacity: 0; }
+    @keyframes scanline { 0% { transform: translateY(-402px) } 100% { transform: translateY(402px) } }
+    .scanline { animation: scanline 3s linear infinite; }
+  </style>
+
+  <text x="28" y="41" fill="#39d353" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace" font-size="13" font-weight="bold" class="line-0" filter="url(#text-glow)">arnavsao@neural</text>
+  <text x="28" y="63" fill="#30363d" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace" font-size="13" class="line-1">───────────────</text>
+  <text y="85" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace" font-size="13" class="line-2"><tspan x="28" fill="#39d353" font-weight="bold">Role</tspan><tspan fill="#c9d1d9">  AI Engineer</tspan></text>
+  <text y="107" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace" font-size="13" class="line-3"><tspan x="28" fill="#39d353" font-weight="bold">Focus</tspan><tspan fill="#c9d1d9">  LLMs · RAG · Agentic AI · Fine-tuning</tspan></text>
+  <text y="129" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace" font-size="13" class="line-4"><tspan x="28" fill="#39d353" font-weight="bold">Stack</tspan><tspan fill="#c9d1d9">  Python · TypeScript · Angular · LangChain</tspan></text>
+  <text y="151" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace" font-size="13" class="line-5"><tspan x="28" fill="#39d353" font-weight="bold">Now</tspan><tspan fill="#c9d1d9">  AI-powered CAD system @ Aagento AI</tspan></text>
+  <text x="28" y="173" fill="#c9d1d9" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace" font-size="13" class="line-6">  → NL commands · DXF parsing · Canvas 2D</text>
+  <text y="195" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace" font-size="13" class="line-7"><tspan x="28" fill="#39d353" font-weight="bold">Shipped</tspan><tspan fill="#c9d1d9">  LLaMA 2 QLoRA fine-tuning (Modal A100)</tspan></text>
+  <text x="28" y="217" fill="#c9d1d9" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace" font-size="13" class="line-8">  → Kerala Ayurveda RAG (4-agent pipeline)</text>
+  <text x="28" y="239" fill="#c9d1d9" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace" font-size="13" class="line-9">  → DPR Validator (RAG + OCR, Railways)</text>
+  <text y="261" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace" font-size="13" class="line-10"><tspan x="28" fill="#39d353" font-weight="bold">AI</tspan><tspan fill="#c9d1d9">  PEFT/LoRA · ChromaDB · Ollama · Gemini</tspan></text>
+  <text y="305" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace" font-size="13" class="line-12"><tspan x="28" fill="#39d353" font-weight="bold">Web</tspan><tspan fill="#c9d1d9">  avivashishta.com</tspan></text>
+  <g class="line-14">
+    <rect x="36" y="339" width="16" height="16" rx="3" fill="#39d353" />
+    <rect x="58" y="339" width="16" height="16" rx="3" fill="#2ea043" />
+    <rect x="80" y="339" width="16" height="16" rx="3" fill="#006d32" />
+    <rect x="102" y="339" width="16" height="16" rx="3" fill="#39d353" />
+    <rect x="124" y="339" width="16" height="16" rx="3" fill="#2ea043" />
+    <rect x="146" y="339" width="16" height="16" rx="3" fill="#006d32" />
+  </g>
+  <rect class="cursor-blink" x="198" y="296" width="8" height="15" rx="1" fill="#2ea043" />
+
+  <rect class="scanline" x="0" y="0" width="490" height="2" fill="#39d353" opacity="0.05" />
+</svg>

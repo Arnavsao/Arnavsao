@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 204"
+     width="490" height="204">
+
+  <defs>
+    <linearGradient id="border-g2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#39d353" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#2ea043" stop-opacity="0.2" />
+    </linearGradient>
+  </defs>
+
+  <rect width="490" height="204" fill="#0d1117" rx="8" />
+  <rect x="1" y="1" width="488" height="202" fill="none" stroke="url(#border-g2)" stroke-width="1" rx="7" />
+
+  <style>
+    @keyframes fadeSlideIn {
+      from { opacity: 0; transform: translateX(15px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+    .sline-0 { opacity: 0; animation: fadeSlideIn 0.45s ease-out 0.50s forwards; }
+    .sline-1 { opacity: 0; animation: fadeSlideIn 0.45s ease-out 0.64s forwards; }
+    .sline-2 { opacity: 0; animation: fadeSlideIn 0.45s ease-out 0.78s forwards; }
+    .sline-3 { opacity: 0; animation: fadeSlideIn 0.45s ease-out 0.92s forwards; }
+    .sline-4 { opacity: 0; animation: fadeSlideIn 0.45s ease-out 1.06s forwards; }
+    .sline-5 { opacity: 0; animation: fadeSlideIn 0.45s ease-out 1.20s forwards; }
+    @keyframes scanline { 0% { transform: translateY(-204px) } 100% { transform: translateY(204px) } }
+    .scanline { animation: scanline 3s linear infinite; }
+  </style>
+
+  <text x="28" y="41" fill="#39d353" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace" font-size="13" font-weight="bold" class="sline-0">./github stats</text>
+  <text x="28" y="63" fill="#30363d" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace" font-size="13" class="sline-1">──────────────</text>
+  <text y="85" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace" font-size="13" class="sline-2"><tspan x="28" fill="#c9d1d9">Total Contributions</tspan><tspan fill="#30363d"> </tspan><tspan fill="#39d353" font-weight="bold">528</tspan></text>
+  <text y="107" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace" font-size="13" class="sline-3"><tspan x="28" fill="#c9d1d9">Longest Streak</tspan><tspan fill="#30363d"> </tspan><tspan fill="#39d353" font-weight="bold">8 days</tspan></text>
+  <text y="129" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace" font-size="13" class="sline-4"><tspan x="28" fill="#c9d1d9">Repositories</tspan><tspan fill="#30363d"> </tspan><tspan fill="#39d353" font-weight="bold">0</tspan></text>
+  <text y="151" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace" font-size="13" class="sline-5"><tspan x="28" fill="#c9d1d9">Followers</tspan><tspan fill="#30363d"> </tspan><tspan fill="#39d353" font-weight="bold">0</tspan></text>
+  <rect class="scanline" x="0" y="0" width="490" height="2" fill="#39d353" opacity="0.05" />
+</svg>
