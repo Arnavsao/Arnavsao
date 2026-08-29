@@ -94,32 +94,18 @@
     <text class="badge-e" x="780" y="180" font-size="17" font-family="'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif" style="animation-delay:1.2000000000000002s">🔮</text>
     <text class="badge-e" x="807" y="180" font-size="17" font-family="'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif" style="animation-delay:1.6s">🏆</text>
   </g>
-  <rect x="16" y="208" width="588" height="496" rx="10" fill="#111214" />
-  <text class="fade f0" x="36" y="244" fill="#F2F3F5" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="23" font-weight="800">Arnav Sao</text>
-  <text class="fade f1" x="36" y="266" fill="#B5BAC1" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5">arnavsao</text>
-  <text class="fade f2" x="36" y="292" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5"><tspan font-family="'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif">🐉</tspan><tspan fill="#B5BAC1" dx="6">taming dragons · fine-tuning LLMs</tspan></text>
-  <line class="fade f2" x1="36" y1="310" x2="584" y2="310" stroke="#3F4147" stroke-width="1" />
-  <text class="fade f3" x="36" y="336" fill="#B5BAC1" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1">ABOUT ME</text>
-  <text class="fade f4" x="36" y="357" fill="#F2F3F5" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5">AI Engineer — building an AI-powered CAD system @ Aagento AI</text>
-  <text class="fade f5" x="36" y="378" fill="#F2F3F5" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5">LLMs · RAG · Agentic AI · Fine-tuning (QLoRA on A100s)</text>
-  <text class="fade f6" x="36" y="399" fill="#F2F3F5" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5">Shipped: Kerala Ayurveda RAG · DPR Validator (Indian Railways)</text>
-  <text class="fade f7" x="36" y="420" fill="#00A8FC" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" text-decoration="underline">arnavsao-portfolio.vercel.app</text>
-  <line class="fade f7" x1="36" y1="438" x2="584" y2="438" stroke="#3F4147" stroke-width="1" />
-  <text class="fade f8" x="36" y="464" fill="#B5BAC1" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1">PLAYING A GAME</text>
-  <g class="fade f9">
-    <rect x="36" y="478" width="46" height="46" rx="10" fill="url(#iconGrad)" />
-    <text x="59" y="509" text-anchor="middle" font-size="22" font-family="'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif" class="brain">🧠</text>
-    <text x="96" y="493" fill="#F2F3F5" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="700">Neural Network Training</text>
-    <text x="96" y="510" fill="#B5BAC1" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12">epoch 42/&#8734; · loss 0.0042 &#8595;</text>
-    <text x="96" y="526" fill="#23A55A" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12">532 XP earned this year</text>
-  </g>
-  <g class="fade f9">
-    <rect x="36" y="538" width="548" height="6" rx="3" fill="#2B2D31" />
-    <rect class="loss-bar" x="36" y="538" width="548" height="6" rx="3" fill="url(#barGrad)" />
-    <rect class="shimmer" x="36" y="538" width="60" height="6" rx="3" fill="#ffffff" opacity="0.25" />
-  </g>
-  <line class="fade f9" x1="36" y1="554" x2="584" y2="554" stroke="#3F4147" stroke-width="1" />
-  <text class="fade f10" x="36" y="580" fill="#B5BAC1" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1">ROLES</text>
+  <rect x="16" y="204" width="828" height="386" rx="10" fill="#111214" />
+  <text class="fade f0" x="40" y="242" fill="#F2F3F5" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="23" font-weight="800">Arnav Sao</text>
+  <text class="fade f1" x="40" y="264" fill="#B5BAC1" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5">arnavsao · he/him</text>
+  <text class="fade f2" x="40" y="290" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5"><tspan font-family="'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif">🐉</tspan><tspan fill="#B5BAC1" dx="6">taming dragons · fine-tuning LLMs</tspan></text>
+  <line class="fade f2" x1="40" y1="308" x2="472" y2="308" stroke="#3F4147" stroke-width="1" />
+  <text class="fade f3" x="40" y="335" fill="#B5BAC1" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1">ABOUT ME</text>
+  <text class="fade f4" x="40" y="356" fill="#F2F3F5" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5">AI Engineer — building an AI-powered CAD system @ Aagento AI</text>
+  <text class="fade f5" x="40" y="377" fill="#F2F3F5" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5">LLMs · RAG · Agentic AI · Fine-tuning (QLoRA on A100s)</text>
+  <text class="fade f6" x="40" y="398" fill="#F2F3F5" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5">Shipped: Kerala Ayurveda RAG · DPR Validator (Indian Railways)</text>
+  <text class="fade f7" x="40" y="419" fill="#00A8FC" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" text-decoration="underline">arnavsao-portfolio.vercel.app</text>
+  <line class="fade f7" x1="40" y1="437" x2="472" y2="437" stroke="#3F4147" stroke-width="1" />
+  <text class="fade f8" x="40" y="464" fill="#B5BAC1" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1">ROLES</text>
   <g class="pill pill-0">
     <rect x="40" y="476" width="78" height="26" rx="13" fill="#2B2D31" stroke="#3F4147" stroke-width="1" />
     <circle cx="55" cy="489" r="5" fill="#3776AB" />
@@ -166,7 +152,7 @@
     <text x="543" y="283" text-anchor="middle" font-size="22" font-family="'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif" class="brain">🧠</text>
     <text x="580" y="267" fill="#F2F3F5" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="700">Neural Network Training</text>
     <text x="580" y="284" fill="#B5BAC1" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12">epoch 42/&#8734; · loss 0.0042 &#8595;</text>
-    <text x="580" y="300" fill="#23A55A" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12">528 XP earned this year</text>
+    <text x="580" y="300" fill="#23A55A" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12">532 XP earned this year</text>
   </g>
   <g class="fade f4">
     <rect x="520" y="314" width="300" height="6" rx="3" fill="#2B2D31" />
@@ -175,7 +161,7 @@
   </g>
   <line class="fade f5" x1="520" y1="338" x2="820" y2="338" stroke="#3F4147" stroke-width="1" />
   <text class="fade f6" x="520" y="365" fill="#B5BAC1" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1">SERVER STATS</text>
-  <text class="fade f7" x="520" y="388" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5"><tspan font-family="'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif">⚡</tspan><tspan fill="#F2F3F5" dx="8">528 contributions this year</tspan></text>
+  <text class="fade f7" x="520" y="388" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5"><tspan font-family="'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif">⚡</tspan><tspan fill="#F2F3F5" dx="8">532 contributions this year</tspan></text>
   <text class="fade f8" x="520" y="411" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5"><tspan font-family="'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif">🔥</tspan><tspan fill="#F2F3F5" dx="8">8-day longest streak</tspan></text>
   <text class="fade f9" x="520" y="434" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5"><tspan font-family="'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif">📍</tspan><tspan fill="#F2F3F5" dx="8">Bengaluru, India</tspan></text>
   <text class="fade f10" x="520" y="457" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5"><tspan font-family="'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif">🐉</tspan><tspan fill="#F2F3F5" dx="8">1 dragon on cursor duty</tspan></text>
