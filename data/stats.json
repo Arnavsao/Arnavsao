@@ -1,8 +1,12 @@
 {
-  "repositories": 0,
-  "followers": 0,
-  "following": 0,
-  "stars": 0,
+  "repositories": 54,
+  "followers": 4,
+  "following": 4,
+  "stars": 30,
   "total_contributions": 532,
-  "longest_streak": 8
+  "longest_streak": 8,
+  "commits": 476,
+  "prs": 27,
+  "prs_merged": 23,
+  "issues": 2
 }

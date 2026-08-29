@@ -24,10 +24,12 @@ jobs:
 
       - run: python scripts/fetch_contributions.py
       - run: python scripts/fetch_stats.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: python scripts/render_heatmap_svg.py
-      - run: python scripts/make_stats_svg.py
       - run: python scripts/make_discord_card.py
       - run: python scripts/make_discord_chat.py
+      - run: python scripts/make_discord_stats.py
 
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
