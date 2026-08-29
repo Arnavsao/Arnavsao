@@ -1,22 +1,26 @@
 <div align="center">
 
-<img src="./header-banner.svg" width="860" />
+<sub>🟢 &nbsp;you've joined <b>arnavsao's server</b> — currently viewing <code>#readme</code> &nbsp;·&nbsp; 🐉 the dragon has taken over your cursor</sub>
 
 <br><br>
 
-<h3><code>arnavsao@neural ~/projects $ ./contributions.sh</code></h3>
-
-<img src="./contrib-heatmap.svg" width="860" />
+<img src="./discord-card.svg" width="620" alt="Arnav Sao — Discord-style animated profile card" />
 
 <br><br>
 
-<h3><code>arnavsao@neural ~/projects $ whoami</code></h3>
+<h3><code>#</code> tech-stack</h3>
 
-<table>
-  <tr>
-    <td valign="top"><img src="./avi-ascii.svg" width="370" /></td>
-    <td valign="top"><img src="./info-card.svg" width="490" /></td>
-  </tr>
-</table>
+<img src="./discord-chat.svg" width="860" alt="Discord-style chat showing tech stack and current projects" />
+
+<br><br>
+
+<h3><code>#</code> contribution-activity</h3>
+
+<img src="./contrib-heatmap.svg" width="860" alt="Contribution heatmap in Discord blurple" />
+
+<br><br>
+
+<sub>watch the profile card — a cursor flies in, hovers, and turns into a dragon 🐉<br>
+refreshed daily by a GitHub Action · <a href="https://arnavsao-portfolio.vercel.app">arnavsao-portfolio.vercel.app</a></sub>
 
 </div>

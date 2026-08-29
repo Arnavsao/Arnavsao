@@ -21,25 +21,25 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA_PATH = ROOT / "data" / "contributions.json"
 OUTPUT = ROOT / "contrib-heatmap.svg"
 
-# ── Sci-Fi Design ───────────────────────────────────────────────────
-BG_COLOR    = "#0d1117"
-TEXT_COLOR  = "#39d353"
-DIM_TEXT    = "#8b949e"
+# ── Discord Design ──────────────────────────────────────────────────
+BG_COLOR    = "#313338"
+TEXT_COLOR  = "#7983F5"
+DIM_TEXT    = "#949BA4"
 CELL_SIZE   = 12
 CELL_GAP    = 3
-CELL_RX     = 2  # slightly sharper corners
+CELL_RX     = 3  # rounded, Discord-soft corners
 
-# Colors for contribution levels (0 to 4+)
+# Colors for contribution levels (0 to 4+) — blurple ramp
 LEVEL_COLORS = [
-    "#161b22",  # 0
-    "#0e4429",  # 1
-    "#006d32",  # 2
-    "#2ea043",  # 3
-    "#39d353",  # 4+
+    "#232428",  # 0
+    "#3B3F78",  # 1
+    "#4A52B3",  # 2
+    "#5865F2",  # 3
+    "#8B94FA",  # 4+
 ]
 GLOW_LEVEL = 4  # Apply SVG glow filter to cells at this level or higher
 
-FONT_FAMILY = "'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace"
+FONT_FAMILY = "'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
 FONT_SIZE = 11
 STATS_FONT_SIZE = 12
 

@@ -40,7 +40,7 @@ INFO_LINES = [
     ("",           "→ DPR Validator (RAG + OCR, Railways)"),
     ("AI",         "PEFT/LoRA · ChromaDB · Ollama · Gemini"),
     ("",           ""),
-    ("Web",        "avivashishta.com"),
+    ("Web",        "arnavsao-portfolio.vercel.app"),
 ]
 
 # ── Sci-Fi Design ───────────────────────────────────────────────────

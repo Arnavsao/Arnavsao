@@ -26,6 +26,8 @@ jobs:
       - run: python scripts/fetch_stats.py
       - run: python scripts/render_heatmap_svg.py
       - run: python scripts/make_stats_svg.py
+      - run: python scripts/make_discord_card.py
+      - run: python scripts/make_discord_chat.py
 
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
