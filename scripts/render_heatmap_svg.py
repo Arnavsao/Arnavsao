@@ -111,7 +111,8 @@ def main() -> None:
     num_rows = 7
 
     # ── SVG Dimensions ──────────────────────────────────────────────
-    margin_top = 30
+    header_h = 42
+    margin_top = 30 + header_h + 4
     margin_left = 35
     margin_right = 20
     margin_bottom = 50
@@ -142,7 +143,20 @@ def main() -> None:
     parts.append("")
 
     # ── Background ──────────────────────────────────────────────────
-    parts.append(f'  <rect width="{svg_w}" height="{svg_h}" fill="{BG_COLOR}" rx="8" />')
+    parts.append(f'  <rect width="{svg_w}" height="{svg_h}" fill="{BG_COLOR}" rx="12" />')
+    parts.append(f'  <rect x="0.5" y="0.5" width="{svg_w - 1}" height="{svg_h - 1}" rx="11.5" fill="none" stroke="#3F4147" />')
+    parts.append("")
+
+    # ── Discord channel header ──────────────────────────────────────
+    UI_FONT = "'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
+    parts.append(f'  <path d="M0,12 Q0,0 12,0 L{svg_w - 12},0 Q{svg_w},0 {svg_w},12 L{svg_w},{header_h} L0,{header_h} Z" fill="#2B2D31" />')
+    parts.append(f'  <line x1="0" y1="{header_h}" x2="{svg_w}" y2="{header_h}" stroke="#3F4147" stroke-width="1" />')
+    parts.append(f'  <text x="20" y="28" fill="{DIM_TEXT}" font-family="{UI_FONT}" font-size="19" font-weight="700">#</text>')
+    parts.append(f'  <text x="38" y="27" fill="#F2F3F5" font-family="{UI_FONT}" font-size="15" font-weight="700">contribution-activity</text>')
+    parts.append(f'  <line x1="196" y1="12" x2="196" y2="30" stroke="#3F4147" stroke-width="1" />')
+    parts.append(f'  <text x="208" y="27" fill="{DIM_TEXT}" font-family="{UI_FONT}" font-size="12.5">one green square a day keeps the dragon fed</text>')
+    parts.append(f'  <circle cx="{svg_w - 96}" cy="21" r="4" fill="#23A55A" />')
+    parts.append(f'  <text x="{svg_w - 86}" y="25" fill="{DIM_TEXT}" font-family="{UI_FONT}" font-size="12">1 online</text>')
     parts.append("")
 
     # ── CSS Animation ───────────────────────────────────────────────

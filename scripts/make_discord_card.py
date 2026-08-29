@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """
-make_discord_card.py — Discord Profile Popout Edition
-─────────────────────────────────────────────────────
-Generates an animated Discord-style profile card SVG:
+make_discord_card.py — Discord Profile Popout Edition (full-width)
+──────────────────────────────────────────────────────────────────
+Generates an animated Discord-style profile card SVG, 860px wide to
+match the chat + heatmap cards:
   • Animated blurple banner (shifting gradient + drifting orbs)
   • Real circular avatar (embedded photo) with pulsing online status
-  • Badge tray, About Me, "Playing" activity with live progress bar
-  • Role pills that pop in, typing indicator
+  • Two-column body: identity / About Me / roles on the left,
+    "Playing" activity + server stats on the right
   • Dragon cursor simulation: a mouse pointer glides in, "hovers"
     the card, morphs into a 🐉 and prowls over it forever
 
@@ -41,7 +42,7 @@ FLAME        = "#F26522"
 FONT  = "'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
 EMOJI = "'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif"
 
-W = 620
+W = 860
 
 ABOUT_LINES = [
     "AI Engineer — building an AI-powered CAD system @ Aagento AI",
@@ -62,19 +63,15 @@ ROLES = [
 ]
 
 
-def avatar_b64() -> str:
-    return base64.b64encode(AVATAR_PATH.read_bytes()).decode("ascii")
-
-
-def total_contributions() -> int:
+def load_stats() -> dict:
     try:
-        return json.loads(STATS_PATH.read_text())["total_contributions"]
+        return json.loads(STATS_PATH.read_text())
     except Exception:
-        return 0
+        return {}
 
 
 def role_pills(x0: float, y0: float, max_w: float) -> tuple[list[str], float]:
-    """Lay out role pills with wrap; returns (svg parts, height used)."""
+    """Lay out role pills with wrap; returns (svg parts, y after last row)."""
     parts, x, y = [], x0, y0
     h, gap, pad = 26, 8, 10
     for i, (name, color) in enumerate(ROLES):
@@ -90,108 +87,124 @@ def role_pills(x0: float, y0: float, max_w: float) -> tuple[list[str], float]:
                      f'font-family="{FONT}" font-size="12.5">{html.escape(name)}</text>')
         parts.append("  </g>")
         x += w + gap
-    return parts, (y + h) - y0
+    return parts, y + h
 
 
 def main() -> None:
-    avatar = avatar_b64()
-    contribs = total_contributions()
+    avatar = base64.b64encode(AVATAR_PATH.read_bytes()).decode("ascii")
+    stats = load_stats()
+    contribs = stats.get("total_contributions", 0)
+    streak = stats.get("longest_streak", 0)
 
     banner_h = 140
     panel_x, panel_w = 16, W - 32
-    pad = 20
-    tx = panel_x + pad          # text left edge inside panel
+    panel_y = 204
+    tx = 40                       # left column text edge
+    col_split = 496               # vertical divider x
+    left_w = col_split - tx - 24  # left column usable width
+    rx0 = col_split + 24          # right column text edge
+    right_w = panel_x + panel_w - 24 - rx0
 
-    p: list[str] = []
-
-    # ── panel content (built first so we know the height) ───────────
     body: list[str] = []
-    panel_y = 208
-    y = panel_y + 36
 
-    body.append(f'  <text class="fade f0" x="{tx}" y="{y}" fill="{TEXT}" font-family="{FONT}" '
+    # ── left column ─────────────────────────────────────────────────
+    ly = panel_y + 38
+    body.append(f'  <text class="fade f0" x="{tx}" y="{ly}" fill="{TEXT}" font-family="{FONT}" '
                 f'font-size="23" font-weight="800">Arnav Sao</text>')
-    y += 22
-    body.append(f'  <text class="fade f1" x="{tx}" y="{y}" fill="{MUTED}" font-family="{FONT}" '
-                f'font-size="13.5">arnavsao</text>')
-    y += 26
-    body.append(f'  <text class="fade f2" x="{tx}" y="{y}" font-family="{FONT}" font-size="13.5">'
+    ly += 22
+    body.append(f'  <text class="fade f1" x="{tx}" y="{ly}" fill="{MUTED}" font-family="{FONT}" '
+                f'font-size="13.5">arnavsao · he/him</text>')
+    ly += 26
+    body.append(f'  <text class="fade f2" x="{tx}" y="{ly}" font-family="{FONT}" font-size="13.5">'
                 f'<tspan font-family="{EMOJI}">🐉</tspan>'
                 f'<tspan fill="{MUTED}" dx="6">taming dragons · fine-tuning LLMs</tspan></text>')
-    y += 18
-    body.append(f'  <line class="fade f2" x1="{tx}" y1="{y}" x2="{panel_x + panel_w - pad}" y2="{y}" '
+    ly += 18
+    body.append(f'  <line class="fade f2" x1="{tx}" y1="{ly}" x2="{tx + left_w}" y2="{ly}" '
                 f'stroke="{DIVIDER}" stroke-width="1" />')
-
-    # About me
-    y += 26
-    body.append(f'  <text class="fade f3" x="{tx}" y="{y}" fill="{MUTED}" font-family="{FONT}" '
+    ly += 27
+    body.append(f'  <text class="fade f3" x="{tx}" y="{ly}" fill="{MUTED}" font-family="{FONT}" '
                 f'font-size="11" font-weight="700" letter-spacing="1">ABOUT ME</text>')
     for i, line in enumerate(ABOUT_LINES):
-        y += 21
-        body.append(f'  <text class="fade f{4 + i}" x="{tx}" y="{y}" fill="{TEXT}" '
+        ly += 21
+        body.append(f'  <text class="fade f{4 + i}" x="{tx}" y="{ly}" fill="{TEXT}" '
                     f'font-family="{FONT}" font-size="12.5">{html.escape(line)}</text>')
-    y += 21
-    body.append(f'  <text class="fade f7" x="{tx}" y="{y}" fill="{LINK}" font-family="{FONT}" '
+    ly += 21
+    body.append(f'  <text class="fade f7" x="{tx}" y="{ly}" fill="{LINK}" font-family="{FONT}" '
                 f'font-size="12.5" text-decoration="underline">{PORTFOLIO}</text>')
-    y += 18
-    body.append(f'  <line class="fade f7" x1="{tx}" y1="{y}" x2="{panel_x + panel_w - pad}" y2="{y}" '
+    ly += 18
+    body.append(f'  <line class="fade f7" x1="{tx}" y1="{ly}" x2="{tx + left_w}" y2="{ly}" '
                 f'stroke="{DIVIDER}" stroke-width="1" />')
+    ly += 27
+    body.append(f'  <text class="fade f8" x="{tx}" y="{ly}" fill="{MUTED}" font-family="{FONT}" '
+                f'font-size="11" font-weight="700" letter-spacing="1">ROLES</text>')
+    ly += 12
+    pills, ly = role_pills(tx, ly, left_w)
+    body.extend(pills)
 
-    # Playing activity
-    y += 26
-    body.append(f'  <text class="fade f8" x="{tx}" y="{y}" fill="{MUTED}" font-family="{FONT}" '
+    # ── right column ────────────────────────────────────────────────
+    ry = panel_y + 34
+    body.append(f'  <text class="fade f2" x="{rx0}" y="{ry}" fill="{MUTED}" font-family="{FONT}" '
                 f'font-size="11" font-weight="700" letter-spacing="1">PLAYING A GAME</text>')
-    y += 14
-    icon_y = y
-    body.append(f'  <g class="fade f9">')
-    body.append(f'    <rect x="{tx}" y="{icon_y}" width="46" height="46" rx="10" fill="url(#iconGrad)" />')
-    body.append(f'    <text x="{tx + 23}" y="{icon_y + 31}" text-anchor="middle" font-size="22" '
+    ry += 14
+    body.append(f'  <g class="fade f3">')
+    body.append(f'    <rect x="{rx0}" y="{ry}" width="46" height="46" rx="10" fill="url(#iconGrad)" />')
+    body.append(f'    <text x="{rx0 + 23}" y="{ry + 31}" text-anchor="middle" font-size="22" '
                 f'font-family="{EMOJI}" class="brain">🧠</text>')
-    body.append(f'    <text x="{tx + 60}" y="{icon_y + 15}" fill="{TEXT}" font-family="{FONT}" '
+    body.append(f'    <text x="{rx0 + 60}" y="{ry + 15}" fill="{TEXT}" font-family="{FONT}" '
                 f'font-size="13.5" font-weight="700">Neural Network Training</text>')
-    body.append(f'    <text x="{tx + 60}" y="{icon_y + 32}" fill="{MUTED}" font-family="{FONT}" '
+    body.append(f'    <text x="{rx0 + 60}" y="{ry + 32}" fill="{MUTED}" font-family="{FONT}" '
                 f'font-size="12">epoch 42/&#8734; · loss 0.0042 &#8595;</text>')
-    body.append(f'    <text x="{tx + 60}" y="{icon_y + 48}" fill="{ONLINE}" font-family="{FONT}" '
+    body.append(f'    <text x="{rx0 + 60}" y="{ry + 48}" fill="{ONLINE}" font-family="{FONT}" '
                 f'font-size="12">{contribs:,} XP earned this year</text>')
     body.append("  </g>")
-    y = icon_y + 60
-    bar_w = panel_w - pad * 2
-    body.append(f'  <g class="fade f9">')
-    body.append(f'    <rect x="{tx}" y="{y}" width="{bar_w}" height="6" rx="3" fill="{CHIP_BG}" />')
-    body.append(f'    <rect class="loss-bar" x="{tx}" y="{y}" width="{bar_w}" height="6" rx="3" fill="url(#barGrad)" />')
-    body.append(f'    <rect class="shimmer" x="{tx}" y="{y}" width="60" height="6" rx="3" fill="#ffffff" opacity="0.25" />')
+    ry += 62
+    bar_w = right_w
+    body.append(f'  <g class="fade f4">')
+    body.append(f'    <rect x="{rx0}" y="{ry}" width="{bar_w}" height="6" rx="3" fill="{CHIP_BG}" />')
+    body.append(f'    <rect class="loss-bar" x="{rx0}" y="{ry}" width="{bar_w}" height="6" rx="3" fill="url(#barGrad)" />')
+    body.append(f'    <rect class="shimmer" x="{rx0}" y="{ry}" width="60" height="6" rx="3" fill="#ffffff" opacity="0.25" />')
     body.append("  </g>")
-    y += 16
-    body.append(f'  <line class="fade f9" x1="{tx}" y1="{y}" x2="{panel_x + panel_w - pad}" y2="{y}" '
+    ry += 24
+    body.append(f'  <line class="fade f5" x1="{rx0}" y1="{ry}" x2="{rx0 + right_w}" y2="{ry}" '
                 f'stroke="{DIVIDER}" stroke-width="1" />')
+    ry += 27
+    body.append(f'  <text class="fade f6" x="{rx0}" y="{ry}" fill="{MUTED}" font-family="{FONT}" '
+                f'font-size="11" font-weight="700" letter-spacing="1">SERVER STATS</text>')
+    stat_rows = [
+        ("⚡", f"{contribs:,} contributions this year"),
+        ("🔥", f"{streak}-day longest streak"),
+        ("📍", "Bengaluru, India"),
+        ("🐉", "1 dragon on cursor duty"),
+    ]
+    for i, (e, t) in enumerate(stat_rows):
+        ry += 23
+        body.append(f'  <text class="fade f{7 + i}" x="{rx0}" y="{ry}" font-family="{FONT}" font-size="12.5">'
+                    f'<tspan font-family="{EMOJI}">{e}</tspan>'
+                    f'<tspan fill="{TEXT}" dx="8">{html.escape(t)}</tspan></text>')
 
-    # Roles
-    y += 26
-    body.append(f'  <text class="fade f10" x="{tx}" y="{y}" fill="{MUTED}" font-family="{FONT}" '
-                f'font-size="11" font-weight="700" letter-spacing="1">ROLES</text>')
-    y += 12
-    pills, pills_h = role_pills(tx, y, panel_w - pad * 2)
-    body.extend(pills)
-    y += pills_h + 8
-
-    # Typing indicator
-    y += 24
+    # ── typing indicator across the bottom ──────────────────────────
+    by = max(ly, ry) + 32
     for i in range(3):
-        body.append(f'    <circle class="tdot tdot-{i}" cx="{tx + 6 + i * 13}" cy="{y}" r="3.5" fill="{MUTED}" />')
-    body.append(f'  <text x="{tx + 46}" y="{y + 4}" fill="{MUTED}" font-family="{FONT}" font-size="12" '
+        body.append(f'  <circle class="tdot tdot-{i}" cx="{tx + 6 + i * 13}" cy="{by}" r="3.5" fill="{MUTED}" />')
+    body.append(f'  <text x="{tx + 46}" y="{by + 4}" fill="{MUTED}" font-family="{FONT}" font-size="12" '
                 f'font-style="italic">the dragon is watching your cursor&#8230;</text>')
-    y += 20
+    by += 22
 
-    panel_h = y - panel_y
+    panel_h = by - panel_y
     H = panel_y + panel_h + 16
 
+    # column divider
+    body.append(f'  <line class="fade f4" x1="{col_split}" y1="{panel_y + 22}" x2="{col_split}" '
+                f'y2="{panel_y + panel_h - 22}" stroke="{DIVIDER}" stroke-width="1" />')
+
     # ── document ────────────────────────────────────────────────────
+    p: list[str] = []
     p.append(f'<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" '
              f'viewBox="0 0 {W} {H}" width="{W}" height="{H}">')
 
     p.append("  <defs>")
     p.append(f'    <clipPath id="cardClip"><rect width="{W}" height="{H}" rx="14" /></clipPath>')
-    p.append('    <clipPath id="avClip"><circle cx="80" cy="140" r="44" /></clipPath>')
+    p.append('    <clipPath id="avClip"><circle cx="84" cy="140" r="44" /></clipPath>')
     p.append(f'    <linearGradient id="bannerGrad" x1="0%" y1="0%" x2="100%" y2="100%">')
     p.append(f'      <stop offset="0%" stop-color="{BLURPLE}">')
     p.append(f'        <animate attributeName="stop-color" values="{BLURPLE};{VIOLET};#3B4BE0;{BLURPLE}" dur="9s" repeatCount="indefinite" />')
@@ -249,22 +262,21 @@ def main() -> None:
     p.append(f'  <g clip-path="url(#cardClip)">')
     p.append(f'    <rect width="{W}" height="{H}" fill="{CARD_BG}" />')
     p.append(f'    <rect width="{W}" height="{banner_h}" fill="url(#bannerGrad)" />')
-    # banner decorations
-    p.append(f'    <circle class="orb"  cx="470" cy="45" r="34" fill="#ffffff" opacity="0.08" />')
-    p.append(f'    <circle class="orb2" cx="545" cy="95" r="20" fill="#ffffff" opacity="0.10" />')
-    p.append(f'    <circle class="orb2" cx="330" cy="30" r="12" fill="#ffffff" opacity="0.10" />')
-    for sx, sy, d in [(180, 40, 0), (250, 90, 1), (390, 105, 2), (520, 25, 1), (600, 60, 0), (140, 100, 2)]:
+    p.append(f'    <circle class="orb"  cx="640" cy="45" r="34" fill="#ffffff" opacity="0.08" />')
+    p.append(f'    <circle class="orb2" cx="760" cy="95" r="20" fill="#ffffff" opacity="0.10" />')
+    p.append(f'    <circle class="orb2" cx="440" cy="30" r="12" fill="#ffffff" opacity="0.10" />')
+    for sx, sy, d in [(220, 40, 0), (330, 90, 1), (520, 105, 2), (700, 25, 1), (820, 60, 0), (170, 100, 2), (390, 60, 1)]:
         p.append(f'    <circle class="star" cx="{sx}" cy="{sy}" r="1.6" fill="#ffffff" style="animation-delay:{d * .9}s" />')
     p.append("  </g>")
     p.append(f'  <rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="13.5" fill="none" stroke="{DIVIDER}" />')
 
     # ── avatar + status ─────────────────────────────────────────────
-    p.append(f'  <circle cx="80" cy="140" r="52" fill="{CARD_BG}" />')
-    p.append(f'  <image href="data:image/jpeg;base64,{avatar}" x="36" y="96" width="88" height="88" '
+    p.append(f'  <circle cx="84" cy="140" r="52" fill="{CARD_BG}" />')
+    p.append(f'  <image href="data:image/jpeg;base64,{avatar}" x="40" y="96" width="88" height="88" '
              f'clip-path="url(#avClip)" preserveAspectRatio="xMidYMid slice" />')
-    p.append(f'  <circle class="status-pulse" cx="112" cy="172" r="10" fill="{ONLINE}" />')
-    p.append(f'  <circle cx="112" cy="172" r="13" fill="{CARD_BG}" />')
-    p.append(f'  <circle cx="112" cy="172" r="9" fill="{ONLINE}" />')
+    p.append(f'  <circle class="status-pulse" cx="116" cy="172" r="10" fill="{ONLINE}" />')
+    p.append(f'  <circle cx="116" cy="172" r="13" fill="{CARD_BG}" />')
+    p.append(f'  <circle cx="116" cy="172" r="9" fill="{ONLINE}" />')
 
     # ── badge tray ──────────────────────────────────────────────────
     tray_w = 158
@@ -281,10 +293,10 @@ def main() -> None:
     p.extend(body)
 
     # ── dragon cursor simulation ────────────────────────────────────
-    path_d = (f"M {W - 40} -20 C {W - 120} 60, 200 80, 160 150 "
-              f"C 120 220, {W - 140} 260, {W - 160} 340 "
-              f"C {W - 180} 430, 140 420, 120 300 "
-              f"C 100 200, {W - 100} 160, {W - 40} -20")
+    path_d = (f"M {W - 60} -20 C {W - 180} 60, 260 80, 210 160 "
+              f"C 160 240, {W - 200} 250, {W - 220} {H - 160} "
+              f"C {W - 240} {H - 60}, 200 {H - 80}, 170 {H // 2} "
+              f"C 150 200, {W - 140} 150, {W - 60} -20")
     # phase 1: plain white pointer flies in and fades
     p.append('  <g class="ptr">')
     p.append(f'    <g><path d="M0,0 L0,16 L4.5,12.5 L7.5,19 L10,18 L7,11.5 L12,11 Z" fill="#ffffff" '
