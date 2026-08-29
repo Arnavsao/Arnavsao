@@ -110,7 +110,7 @@
     <text x="59" y="509" text-anchor="middle" font-size="22" font-family="'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif" class="brain">🧠</text>
     <text x="96" y="493" fill="#F2F3F5" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="700">Neural Network Training</text>
     <text x="96" y="510" fill="#B5BAC1" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12">epoch 42/&#8734; · loss 0.0042 &#8595;</text>
-    <text x="96" y="526" fill="#23A55A" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12">528 XP earned this year</text>
+    <text x="96" y="526" fill="#23A55A" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12">532 XP earned this year</text>
   </g>
   <g class="fade f9">
     <rect x="36" y="538" width="548" height="6" rx="3" fill="#2B2D31" />

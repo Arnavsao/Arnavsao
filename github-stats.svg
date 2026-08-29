@@ -28,7 +28,7 @@
 
   <text x="28" y="41" fill="#39d353" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace" font-size="13" font-weight="bold" class="sline-0">./github stats</text>
   <text x="28" y="63" fill="#30363d" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace" font-size="13" class="sline-1">──────────────</text>
-  <text y="85" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace" font-size="13" class="sline-2"><tspan x="28" fill="#c9d1d9">Total Contributions</tspan><tspan fill="#30363d"> </tspan><tspan fill="#39d353" font-weight="bold">528</tspan></text>
+  <text y="85" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace" font-size="13" class="sline-2"><tspan x="28" fill="#c9d1d9">Total Contributions</tspan><tspan fill="#30363d"> </tspan><tspan fill="#39d353" font-weight="bold">532</tspan></text>
   <text y="107" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace" font-size="13" class="sline-3"><tspan x="28" fill="#c9d1d9">Longest Streak</tspan><tspan fill="#30363d"> </tspan><tspan fill="#39d353" font-weight="bold">8 days</tspan></text>
   <text y="129" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace" font-size="13" class="sline-4"><tspan x="28" fill="#c9d1d9">Repositories</tspan><tspan fill="#30363d"> </tspan><tspan fill="#39d353" font-weight="bold">0</tspan></text>
   <text y="151" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace" font-size="13" class="sline-5"><tspan x="28" fill="#c9d1d9">Followers</tspan><tspan fill="#30363d"> </tspan><tspan fill="#39d353" font-weight="bold">0</tspan></text>

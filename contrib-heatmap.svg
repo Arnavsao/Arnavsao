@@ -411,6 +411,7 @@
     <rect class="cell" x="780" y="45" width="12" height="12" rx="3" fill="#232428" style="animation: popIn 1.2s ease-out 1.65s forwards; transform-origin: 786.0px 51.0px;" />
     <rect class="cell" x="780" y="60" width="12" height="12" rx="3" fill="#232428" style="animation: popIn 1.2s ease-out 1.68s forwards; transform-origin: 786.0px 66.0px;" />
     <rect class="cell" x="780" y="75" width="12" height="12" rx="3" fill="#232428" style="animation: popIn 1.2s ease-out 1.71s forwards; transform-origin: 786.0px 81.0px;" />
+    <rect class="cell" x="780" y="90" width="12" height="12" rx="3" fill="#4A52B3" style="animation: popIn 1.2s ease-out 1.74s forwards; transform-origin: 786.0px 96.0px;" />
   </g>
 
   <text x="687" y="167" fill="#949BA4" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11">Less</text>
@@ -420,5 +421,5 @@
   <rect x="762" y="157" width="12" height="12" rx="3" fill="#5865F2" />
   <rect x="777" y="157" width="12" height="12" rx="3" fill="#8B94FA" filter="url(#cell-glow)" />
   <text x="797" y="167" fill="#949BA4" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11">More</text>
-  <text x="35" y="167" fill="#7983F5" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="bold">528 Contribs in last year  ·  Longest Streak: 8 days  ·  Best Day: 16 (2025-11-25)</text>
+  <text x="35" y="167" fill="#7983F5" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="bold">532 Contribs in last year  ·  Longest Streak: 8 days  ·  Best Day: 16 (2025-11-25)</text>
 </svg>
