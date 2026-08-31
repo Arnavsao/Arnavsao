@@ -415,7 +415,8 @@
     <rect class="cell" x="765" y="60" width="12" height="12" rx="3" fill="#232428" style="animation: popIn 1.2s ease-out 1.65s forwards; transform-origin: 771.0px 66.0px;" />
     <rect class="cell" x="765" y="75" width="12" height="12" rx="3" fill="#232428" style="animation: popIn 1.2s ease-out 1.68s forwards; transform-origin: 771.0px 81.0px;" />
     <rect class="cell" x="765" y="90" width="12" height="12" rx="3" fill="#5865F2" style="animation: popIn 1.2s ease-out 1.71s forwards; transform-origin: 771.0px 96.0px;" />
-    <rect class="cell" x="780" y="0" width="12" height="12" rx="3" fill="#232428" style="animation: popIn 1.2s ease-out 1.56s forwards; transform-origin: 786.0px 6.0px;" />
+    <rect class="cell" x="780" y="0" width="12" height="12" rx="3" fill="#3B3F78" style="animation: popIn 1.2s ease-out 1.56s forwards; transform-origin: 786.0px 6.0px;" />
+    <rect class="cell" x="780" y="15" width="12" height="12" rx="3" fill="#232428" style="animation: popIn 1.2s ease-out 1.59s forwards; transform-origin: 786.0px 21.0px;" />
   </g>
 
   <text x="687" y="213" fill="#949BA4" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11">Less</text>
@@ -425,5 +426,5 @@
   <rect x="762" y="203" width="12" height="12" rx="3" fill="#5865F2" />
   <rect x="777" y="203" width="12" height="12" rx="3" fill="#8B94FA" filter="url(#cell-glow)" />
   <text x="797" y="213" fill="#949BA4" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11">More</text>
-  <text x="35" y="213" fill="#7983F5" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="bold">536 Contribs in last year  ·  Longest Streak: 8 days  ·  Best Day: 16 (2025-11-25)</text>
+  <text x="35" y="213" fill="#7983F5" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="bold">537 Contribs in last year  ·  Longest Streak: 8 days  ·  Best Day: 16 (2025-11-25)</text>
 </svg>
