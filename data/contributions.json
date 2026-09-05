@@ -1847,19 +1847,24 @@
     },
     {
       "date": "2026-09-04",
-      "count": 0,
-      "level": 0
+      "count": 12,
+      "level": 4
+    },
+    {
+      "date": "2026-09-05",
+      "count": 6,
+      "level": 3
     }
   ],
   "stats": {
     "username": "arnavsao",
-    "total": 357,
-    "current_streak": 6,
-    "longest_streak": 6,
+    "total": 375,
+    "current_streak": 8,
+    "longest_streak": 8,
     "best_day": {
       "date": "2025-11-25",
       "count": 16
     },
-    "num_days": 370
+    "num_days": 371
   }
 }
