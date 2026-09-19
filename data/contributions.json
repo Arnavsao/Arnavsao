@@ -483,7 +483,7 @@
     {
       "date": "2025-12-19",
       "count": 7,
-      "level": 3
+      "level": 2
     },
     {
       "date": "2025-12-20",
@@ -728,12 +728,12 @@
     {
       "date": "2026-02-06",
       "count": 10,
-      "level": 4
+      "level": 3
     },
     {
       "date": "2026-02-07",
       "count": 7,
-      "level": 3
+      "level": 2
     },
     {
       "date": "2026-02-08",
@@ -1173,7 +1173,7 @@
     {
       "date": "2026-05-06",
       "count": 10,
-      "level": 4
+      "level": 3
     },
     {
       "date": "2026-05-07",
@@ -1253,7 +1253,7 @@
     {
       "date": "2026-05-22",
       "count": 10,
-      "level": 4
+      "level": 3
     },
     {
       "date": "2026-05-23",
@@ -1773,7 +1773,7 @@
     {
       "date": "2026-09-03",
       "count": 7,
-      "level": 3
+      "level": 2
     },
     {
       "date": "2026-09-04",
@@ -1828,7 +1828,7 @@
     {
       "date": "2026-09-14",
       "count": 10,
-      "level": 4
+      "level": 3
     },
     {
       "date": "2026-09-15",
@@ -1842,24 +1842,29 @@
     },
     {
       "date": "2026-09-17",
-      "count": 1,
+      "count": 2,
       "level": 1
     },
     {
       "date": "2026-09-18",
+      "count": 14,
+      "level": 4
+    },
+    {
+      "date": "2026-09-19",
       "count": 0,
       "level": 0
     }
   ],
   "stats": {
     "username": "arnavsao",
-    "total": 455,
-    "current_streak": 20,
-    "longest_streak": 20,
+    "total": 470,
+    "current_streak": 21,
+    "longest_streak": 21,
     "best_day": {
       "date": "2026-09-08",
       "count": 23
     },
-    "num_days": 370
+    "num_days": 371
   }
 }
