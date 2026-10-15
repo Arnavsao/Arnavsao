@@ -103,7 +103,7 @@
     <rect x="20" y="254" width="820" height="58" rx="8" fill="#2B2D31" stroke="#3F4147" stroke-width="1" />
     <text class="rocket" x="36" y="290" font-size="22" font-family="'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif">🚀</text>
     <text x="72" y="278" fill="#F2F3F5" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700">SERVER BOOST — Level &#8734;</text>
-    <text x="824" y="278" text-anchor="end" fill="#949BA4" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12">512 contributions · 46-day best streak</text>
+    <text x="824" y="278" text-anchor="end" fill="#949BA4" font-family="'gg sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12">513 contributions · 47-day best streak</text>
     <rect x="72" y="290" width="752" height="8" rx="4" fill="#232428" />
     <rect class="boost-fill" x="72" y="290" width="752" height="8" rx="4" fill="url(#boostGrad)" />
   </g>
