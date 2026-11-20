@@ -1493,7 +1493,7 @@
     {
       "date": "2026-09-10",
       "count": 37,
-      "level": 4
+      "level": 3
     },
     {
       "date": "2026-09-11",
@@ -1508,7 +1508,7 @@
     {
       "date": "2026-09-13",
       "count": 25,
-      "level": 3
+      "level": 2
     },
     {
       "date": "2026-09-14",
@@ -1842,19 +1842,24 @@
     },
     {
       "date": "2026-11-19",
-      "count": 49,
+      "count": 50,
       "level": 4
+    },
+    {
+      "date": "2026-11-20",
+      "count": 1,
+      "level": 1
     }
   ],
   "stats": {
     "username": "arnavsao",
-    "total": 793,
-    "current_streak": 83,
-    "longest_streak": 83,
+    "total": 795,
+    "current_streak": 84,
+    "longest_streak": 84,
     "best_day": {
       "date": "2026-11-19",
-      "count": 49
+      "count": 50
     },
-    "num_days": 369
+    "num_days": 370
   }
 }
